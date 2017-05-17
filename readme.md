@@ -13,7 +13,7 @@ The steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/undistort.png "Undistorted"
+[image1]: ./output_images/undistorted.png "Undistorted"
 [image2]: ./test_images/test1.jpg "Road Transformed"
 [image3]: ./output_images/threshold.png "Binary Example"
 [image4]: ./output_images/warped.png "Warp Example"
@@ -44,7 +44,7 @@ The calibration file is stored as a pickle file so it can be loaded later to und
 
 ### Pipeline
 
-The pipeline can be found in the main.py file in the repository where the calls to the main functions are made. The global pipeline can be described in five steps.
+The pipeline can be found in the `main.py` file in the repository where the calls to the main functions are made. The global pipeline can be described in five steps.
 
 #### 1. Undistorting images
 
@@ -53,13 +53,13 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Color transform gradients and thresholds.
 
-I used a combination of color and gradient thresholds to generate a binary image. The code can be found in the file named threshold_image.py. Here's an example of my output for this step.
+I used a combination of color and gradient thresholds to generate a binary image. The code can be found in the file named `threshold_image.py`. Here's an example of my output for this step.
 
 ![alt text][image3]
 
 #### 3. Perspective transform.
 
-The code for my perspective transform estimation can be found in the function get_perspective_transform in main.py where I setup a set of correspondences between 4 points in a flat road and 4 points in a rectangle. In put the four point correspondences into the opencv function getPerspectiveTransform and we obtain a transfomration matrix that we can use to warp images to a top view. Note that this is only valid for flat roads.
+The code for my perspective transform estimation can be found in the function `get_perspective_transform` in `main.py` where I setup a set of correspondences between 4 points in a flat road and 4 points in a rectangle. In put the four point correspondences into the opencv function `getPerspectiveTransform` and we obtain a transfomration matrix that we can use to warp images to a top view. Note that this is only valid for flat roads.
 
 The following is an example of the previously thresholded image now warped to a top view.
 
@@ -67,7 +67,7 @@ The following is an example of the previously thresholded image now warped to a 
 
 #### 4. Identifying lane lines
 
-In order to identify lines in the thresholded images I evaluate local histograms accross the images to identify the presence of lines. I keep the two peaks for every horizontal slice and then the lines can be made by fitting a second degree polynomial to the centers of the detected bins. The code for this section can be found in the file find_lines.py
+In order to identify lines in the thresholded images I evaluate local histograms accross the images to identify the presence of lines. I keep the two peaks for every horizontal slice and then the lines can be made by fitting a second degree polynomial to the centers of the detected bins. The code for this section can be found in the file `find_lines.py`
 We can see an example in the following image.
 
 ![alt text][image5]
@@ -78,7 +78,7 @@ I use the samples in the lane lines to obtain the radius of both curves and the 
 
 ### Example output
 
-To obtain the output I use th polyfit function from opencv to paint the lane in a warped image and then warped back to the current view by using the inverse perspective transform. An example of the result can be seen in the following image:
+To obtain the output I use the `polyfit` function from opencv to paint the lane in a warped image and then warped back to the current view by using the inverse perspective transform. An example of the result can be seen in the following image:
 
 ![alt text][image6]
 
