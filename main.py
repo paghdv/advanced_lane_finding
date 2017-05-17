@@ -91,4 +91,4 @@ cv2.imshow("Lane finding",res)
 cv2.waitKey()
 
 #process_video("challenge_video.mp4", "challenge_video_out.mp4",(1280,720))
-process_video("project_video.mp4", "project_video_out.mp4",(1280,720))
+#process_video("project_video.mp4", "project_video_out.mp4",(1280,720))

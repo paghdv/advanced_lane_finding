@@ -80,8 +80,8 @@ To obtain the output I use the `polyfit` function from opencv to paint the lane 
 ![alt text][image6]
 
 A video can be seen in the following link:
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=T2tCscbl6y4
-" target="_blank"><img src="http://img.youtube.com/vi/T2tCscbl6y4/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=bZd5OAGwZfA
+" target="_blank"><img src="http://img.youtube.com/vi/bZd5OAGwZfA/0.jpg" 
 alt="Self driving car" width="1280" height="720" border="1" /></a> 
 
 ---
