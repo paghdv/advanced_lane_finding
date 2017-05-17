@@ -14,7 +14,7 @@ The steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./output_images/undistorted.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
+[image2]: ./test_images/straight_lines1.jpg "Road Transformed"
 [image3]: ./output_images/threshold.png "Binary Example"
 [image4]: ./output_images/warped.png "Warp Example"
 [image5]: ./output_images/fit_lines.png "Fit Visual"
