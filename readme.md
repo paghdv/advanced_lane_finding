@@ -46,8 +46,7 @@ The pipeline can be found in the `main.py` file in the repository where the call
 
 #### 1. Undistorting images
 
-To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
+Image undistortion is performed by loading the calibration files obtained by running `calibrate_camera.py`. The intrinsics camera matric along with the distortion parameters are loaded and used in the opencv function `undistort` to produce undistorted images. An example was just shwon above.
 
 #### 2. Color transform gradients and thresholds.
 
