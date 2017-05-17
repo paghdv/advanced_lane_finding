@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def measure_curvature(ploty,leftx,rightx):
+def measure_curvature(ploty,leftx,rightx,im_width):
 
 
 #	mid = len(leftx)/2
@@ -36,5 +36,8 @@ def measure_curvature(ploty,leftx,rightx):
 	y_eval = np.max(ploty)
 	left_curverad = ((1 + (2*left_fit[0]*y_eval + left_fit[1])**2)**1.5) / np.absolute(2*left_fit[0])
 	right_curverad = ((1 + (2*right_fit[0]*y_eval + right_fit[1])**2)**1.5) / np.absolute(2*right_fit[0])
-	return (left_curverad, right_curverad)
+
+	x_location=((leftx[-1]+rightx[-1])/2.0 - im_width/2.0)*xm_per_pix;
+
+	return (left_curverad, right_curverad,x_location)
 	

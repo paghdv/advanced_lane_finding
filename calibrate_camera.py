@@ -43,15 +43,13 @@ undist = cv2.undistort(img, mtx, dist, None, mtx)
 #x,y,w,h = roi
 #print("roi %d %d %d %d %d\n",x,y,w,h)
 #undist = undist[y:y+h, x:x+w]
-cv2.imwrite('calibresult.png',undist)
-
+cv2.imwrite('output_images/calibresult.png',undist)
 
 # Save camera calibration
 calib_pickle = {}
 calib_pickle["mtx"] = mtx
 calib_pickle["dist"] = dist
 pickle.dump( calib_pickle, open( "calibration.p", "wb" ) )
-
 
 #dist_pickle = pickle.load( open( "camera_cal/720x540_cal_pickle.p", "rb" ) )
 #mtx = dist_pickle["mtx"]
